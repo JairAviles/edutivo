@@ -1,0 +1,680 @@
+body {
+    font-size: 1.4em;
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.2;
+}
+
+header {
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, .9);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+
+    .logo {
+        width: 200px;
+        display: inline-block;
+        @include breakpoint(md) {
+            width: 150px;
+        }
+    }
+
+    [type="checkbox"], label {
+        @include breakpoint(md) {
+            display: block;
+            background: $color_1;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 0px;
+        }
+        @include breakpoint(sm) {
+            display: none;
+        }
+        &:after {
+            @include breakpoint(md) {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 5px;
+                background: rgba(255, 255, 255, 0.9);
+                margin: 7px 5px;
+                box-shadow: 0px 10px 0px rgba(255, 255, 255, 0.9), 0px 20px 0px rgba(255, 255, 255, 0.9);
+            }
+        }
+    }
+
+    [type="checkbox"]:checked ~ ul {
+        @include breakpoint(md) {
+            display: block;
+            z-index: 9999;
+            position: absolute;
+            right: 20px;
+            left: 20px;
+        }
+    }
+
+    .navigation {
+        float: right;
+        margin: 7px 0;
+
+        @include breakpoint(md) {
+            margin: 50px 0 !important;
+        }
+
+        ul {
+            @include breakpoint(sm) {
+                display: block;
+            }
+
+            @include breakpoint(md) {
+                display: none;
+                border: 2px solid $color_1;
+            }
+
+            @extend %clearfix;
+
+            li {
+                float: left;
+                padding: 0 5px;
+
+                a {
+                    color: $color_1;
+                    font-size: 1.4em;
+                    padding: 10px 20px;
+                    display: inline-block;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                    @include breakpoint(md) {
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    &:hover,
+                    &.featured {
+                        color: #fff;
+                        background-color: $color_1;
+                    }
+
+                    &.featured {
+                        @include breakpoint(md) {
+                            background-color: rgba(255, 255, 255, .9);
+                            color: $color_1;
+                        }
+                    }
+
+                    &.featured:hover {
+                        background-color: $color_2;
+                    }
+
+                    &.login {
+                        padding: 9px 20px;
+                        border: 1px solid $color_1;
+                        @include breakpoint(md) {
+                            border: none;
+                        }
+                    }
+                }
+                @include breakpoint(md) {
+                    display: block;
+                    float: none;
+                    width: 100%;
+                    text-align: right;
+                    background: rgba(255, 255, 255, .9);
+                    color: $color_2;
+                    text-indent: 0px;
+                }
+            }
+        }
+    }
+
+    .navigation > ul {
+        > li {
+            margin-left: 0px;
+        }
+        li ul {
+            li {
+                display: block;
+                float: none;
+            }
+            display: block;
+            position: relative;
+            width: 100%;
+            z-index: 9999;
+            float: none;
+        }
+    }
+}
+
+.banner {
+    height: 100vh;
+    position: relative;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .banner-content {
+        position: absolute;
+        right: 25%;
+        top: 28%;
+
+        @include breakpoint(md) {
+            right: 10%;
+        }
+
+        h2 {
+            color: $color_1;
+            font-size: 4.4em;
+            font-weight: 300;
+            line-height: 1em;
+
+            @include breakpoint(md) {
+                font-size: 3.4em;
+            }
+
+            span {
+                display: block;
+                font-weight: 600;
+            }
+        }
+
+        p {
+            color: #777;
+            font-size: 1.5em;
+            font-weight: 300;
+            margin: 40px 0;
+        }
+
+        .btn-free {
+            color: #fff;
+            padding: 18px 25px;
+            font-size: 1.8em;
+            display: inline-block;
+            border-radius: 6px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+            text-transform: uppercase;
+            background-color: $color_2;
+            transition: .3s;
+
+            &:hover {
+                background-color: $color_3;
+            }
+        }
+    }
+}
+
+.about {
+    padding: 100px 0;
+    background-color: $color_1;
+
+    p {
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .about-desc {
+        font-size: 3.5em;
+        margin-bottom: 30px;
+
+        .about-desc-icon {
+            display: inline-block;
+            position: relative;
+
+            &:before {
+                content: '';
+                width: 70px;
+                height: 100px;
+                display: block;
+                background-image: url('../img/about_icon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                @include breakpoint(md) {
+                    display: none;
+                }
+            }
+        }
+
+        .about-desc-strong {
+            display: block;
+            font-weight: 600;
+        }
+    }
+
+    .about-hand {
+        width: 220px;
+        height: 220px;
+        display: block;
+        position: absolute;
+        right: 15px;
+        bottom: -100px;
+        background-image: url('../img/about_hand.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+}
+
+.features {
+    padding: 40px 0;
+
+    h3 {
+        color: $color_1;
+        font-size: 3.5em;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 70px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .features-list {
+        width: 100%;
+        @extend %clearfix;
+
+        li {
+            width: 32%;
+            float: left;
+            display: block;
+            padding: 0 20px;
+            margin-bottom: 50px;
+            text-align: center;
+
+            h4 {
+                color: $color_1;
+                font-size: 1.8em;
+                margin-bottom: 10px;
+
+                &:before {
+                    color: $color_2;
+                    display: block;
+                    font-size: 1.8em;
+                    margin-bottom: 10px;
+                }
+            }
+
+            p {
+                color: #777;
+                font-size: 1.2em;
+                font-weight: 300;
+                line-height: 1.7em;
+            }
+        }
+    }
+}
+
+.plans {
+    padding: 40px 0 0;
+    background-color: $color_3;
+
+    .plans-title {
+        text-align: center;
+
+        h3 {
+            color: #fff;
+            font-size: 3.5em;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+    }
+
+    .plans-list {
+        width: 80%;
+        margin: 0 auto;
+        @extend %clearfix;
+
+        > li {
+            width: 30%;
+            float: left;
+            display: block;
+            padding: 0 5px;
+            margin-top: 50px;
+
+            &.pro {
+                width: 40%;
+                margin-top: 0;
+
+                .plans-card {
+                    color: #fff;
+                    background-color: $color_1;
+
+                    &:before {
+                        content: '';
+                        width: 40px;
+                        height: 70px;
+                        display: block;
+                        background-image: url('../img/plan_pro.png');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        top: 0;
+                        @include breakpoint(md) {
+                            background-image: none;
+                        }
+                    }
+
+                    .active-users {
+                        color: $color_2;
+                    }
+
+                    .plans-price span {
+                        color: #fff;
+                    }
+                }
+
+                .plans-features {
+                    padding-bottom: 90px;
+                }
+            }
+
+            .plans-card {
+                color: $color_3;
+                min-height: 410px;
+                padding: 30px;
+                text-align: center;
+                border-radius: 10px;
+                background-color: #fff;
+                position: relative;
+                z-index: 2;
+                bottom: -10px;
+
+                h4 {
+                    font-size: 1.9em;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 1.5em;
+                    font-weight: 300;
+                    text-align: center;
+                    margin: 20px 0;
+
+                    &.active-users {
+                        color: $color_1;
+                        font-weight: 600;
+                    }
+                }
+
+                .btn-confer {
+                    color: #fff;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    margin: 20px 0;
+                    padding: 10px 30px;
+                    border-radius: 8px;
+                    background-color: $color_1;
+
+                    &:hover {
+                        background-color: $color_2;
+                    }
+                }
+
+                .plans-price {
+                    text-align: center;
+                    position: relative;
+
+                    span {
+                        color: $color_1;
+                        font-size: 7.0em;
+                        font-weight: 600;
+                        display: block;
+
+                        & + span {
+                            font-size: 1.8em;
+                            font-weight: 400;
+                            transform: translate(40px, -15px);
+                        }
+                    }
+                }
+            }
+
+            .plans-features {
+                padding: 40px;
+                background-color: $color_4;
+                position: relative;
+                z-index: 1;
+
+                ul {
+                    padding-left: 20px;
+                    list-style-type: disc;
+
+                    li {
+                        color: #fff;
+                        font-size: 1.2em;
+                        font-weight: 300;
+                        line-height: 2em;
+                    }
+                }
+
+                @include breakpoint(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.try-free {
+    .try-free-title {
+        padding: 70px 0 90px;
+        background-color: $color_2;
+
+        h3 {
+            color: #fff;
+            font-size: 3.5em;
+            font-weight: 300;
+            text-align: center;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .btn-try-free {
+            color: #fff;
+            display: inline-block;
+            font-size: 2.5em;
+            font-weight: 600;
+            padding: 20px 30px;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+            background-color: $color_1;
+            position: absolute;
+            left: 50%;
+            bottom: -130px;
+            transform: translateX(-50%);
+            transition: .3s;
+
+            &:hover {
+                background-color: $color_3;
+            }
+        }
+
+        .icon-doc {
+            width: 180px;
+            height: 170px;
+            display: block;
+            background-image: url('../img/doc_icon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: 15px;
+            bottom: -90px;
+
+            @include breakpoint(md) {
+                display: none;
+            }
+        }
+    }
+
+    .try-free-bg {
+        min-height: 380px;
+        background-image: url('../img/try_bg.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+.contact {
+    padding: 40px 0 70px;
+
+    h3 {
+        color: $color_1;
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    form {
+        width: 75%;
+        margin: 0 auto;
+
+        div {
+            width: 50%;
+            float: left;
+            padding: 0 10px;
+
+            @include breakpoint(md) {
+                width: 100%;
+            }
+
+            label {
+                color: $color_3;
+                display: block;
+                font-size: 1.4em;
+                margin-bottom: 5px;
+            }
+
+            input[type='text'], textarea {
+                width: 100%;
+                height: 50px;
+                color: $color_3;
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 1.3em;
+                border-radius: 4px;
+                border-bottom: 5px solid #F5F5F5;
+                background-color: #F5F5F5;
+                transition: .3s;
+
+                &:focus {
+                    border-color: $color_2;
+                }
+            }
+
+            textarea {
+                height: 100px;
+                resize: none;
+            }
+        }
+
+        .message {
+            width: 100%;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 30px;
+            font-size: 1.5em;
+            font-weight: 300;
+            text-transform: uppercase;
+            border-radius: 6px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+            background-color: $color_2;
+            transition: .3s;
+
+            &:hover {
+                background-color: $color_3;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 40px 0 30px;
+    background-color: $color_1;
+
+    .edutivo-icon {
+        width: 60px;
+        height: 90px;
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: 15px;
+        background-image: url('../img/edutivo_icon.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .company {
+        float: right;
+
+        @include breakpoint(md) {
+            width: 100%;
+            text-align: center;
+        }
+
+        p {
+            color: #fff;
+            margin: 10px 0;
+            font-size: .8em;
+        }
+
+        .logo-edutivo {
+            width: 130px;
+        }
+
+        .logo-ilog {
+            width: 95px;
+        }
+    }
+
+    .info {
+        width: 50%;
+        margin: 0 auto 40px;
+
+        p {
+            color: #fff;
+            font-size: 1.8em;
+            font-weight: 600;
+            line-height: 1.5em;
+            text-align: center;
+        }
+    }
+
+    .copyright {
+        p {
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+    }
+}

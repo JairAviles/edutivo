@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'edutivo_site';
+    src: url('../fonts/edutivo_site.eot?98490906');
+    src: url('../fonts/edutivo_site.eot?98490906#iefix') format('embedded-opentype'),
+         url('../fonts/edutivo_site.woff2?98490906') format('woff2'),
+         url('../fonts/edutivo_site.woff?98490906') format('woff'),
+         url('../fonts/edutivo_site.ttf?98490906') format('truetype'),
+         url('../fonts/edutivo_site.svg?98490906#edutivo_site') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="i-"]:before, [class*=" i-"]:before {
+    font-family: "edutivo_site";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.i-interface:before {
+    content: '\e800';
+}
+
+.i-track:before {
+    content: '\e802';
+}
+
+.i-content:before {
+    content: '\e803';
+}
+
+.i-other:before {
+    content: '\e804';
+}
+
+.i-course:before {
+    content: '\e806';
+}
+
+.i-users:before {
+    content: '\e807';
+}

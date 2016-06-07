@@ -1,0 +1,33 @@
+%clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.line {
+    width: 100%;
+    @extend %clearfix;
+
+    @include breakpoint(md) {
+        height: 25%;
+    }
+}
+
+.wrap {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    @extend %clearfix;
+
+    @include breakpoint(lg) {
+        max-width: 1200px;
+    }
+}
+
+.anchor {
+    position: absolute;
+    top: -100px;
+}
