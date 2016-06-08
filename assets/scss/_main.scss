@@ -90,10 +90,12 @@ header {
 
                     @include breakpoint(md) {
                         width: 100%;
+                        font-size: 1.8em;
                         text-align: center;
                     }
 
                     &:hover,
+                    &:active,
                     &.featured {
                         color: #fff;
                         background-color: $color_1;
@@ -293,6 +295,10 @@ header {
             margin-bottom: 50px;
             text-align: center;
 
+            @include breakpoint(md) {
+                width: 100%;
+            }
+
             h4 {
                 color: $color_1;
                 font-size: 1.8em;
@@ -350,9 +356,19 @@ header {
             padding: 0 5px;
             margin-top: 50px;
 
+            @include breakpoint(md) {
+                position: relative;
+                margin-bottom: 50px;
+                width: 100%;
+            }
+
             &.pro {
                 width: 40%;
                 margin-top: 0;
+
+                @include breakpoint(md) {
+                    width: 100%;
+                }
 
                 .plans-card {
                     color: #fff;
@@ -442,6 +458,10 @@ header {
                         font-weight: 600;
                         display: block;
 
+                        @include breakpoint(md) {
+                            font-size: 6.0em;
+                        }
+
                         & + span {
                             font-size: 1.8em;
                             font-weight: 400;
@@ -513,6 +533,10 @@ header {
             &:hover {
                 background-color: $color_3;
             }
+
+            @include breakpoint(md) {
+                display: none;
+            }
         }
 
         .icon-doc {
@@ -536,11 +560,19 @@ header {
         min-height: 380px;
         background-image: url('../img/try_bg.jpg');
         background-repeat: no-repeat;
+
+        @include breakpoint(md) {
+            display: none;
+        }
     }
 }
 
 .contact {
     padding: 40px 0 70px;
+
+    @include breakpoint(md) {
+        font-size: 2em;
+    }
 
     h3 {
         color: $color_1;
@@ -667,6 +699,10 @@ footer {
             font-weight: 600;
             line-height: 1.5em;
             text-align: center;
+
+            @include breakpoint(md) {
+                font-size: 1.4em;
+            }
         }
     }
 

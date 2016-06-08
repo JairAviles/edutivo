@@ -9,8 +9,9 @@
     @extend %clearfix;
 
     @include breakpoint(md) {
-        height: 25%;
+        height: 20%;
     }
+
 }
 
 .wrap {
