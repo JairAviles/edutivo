@@ -30,6 +30,7 @@
         <div class="wrap">
             <a class="logo" href="#" title="Edutivo">
                 <h1>
+                    <span>Edutivo. Plataforma de e-learning.</span>
                     <img src="assets/img/edutivo_logo.svg" alt="Plataforma EAD fácil" />
                 </h1>
             </a>
@@ -40,7 +41,10 @@
                         <a onclick="closeResponsiveMenu('nav')" href="#recursos" title="Recursos">Recursos</a>
                     </li>
                     <li>
-                        <a onclick="closeResponsiveMenu('nav')" href="#planos" title="Planos">Planos</a>
+                        <a onclick="closeResponsiveMenu('nav')" href="/planos/" title="Planos">Planos</a>
+                    </li>
+                    <li>
+                        <a onclick="closeResponsiveMenu('nav')" href="/faq/" title="Perguntas Frequentes">Perguntas Frequentes</a>
                     </li>
                     <li>
                         <a onclick="closeResponsiveMenu('nav')" href="#faleconosco" class="featured" title="Experimente grátis">Experimente grátis</a>
@@ -59,14 +63,15 @@
             <h2 class="animated fadeInRight">de e-learning.</h2>
             <p>A maneira mais fácil de gerenciar<br>o treinamento de sua equipe.</p>
             <a class="btn-free animated pulse" href="#faleconosco">Experimente grátis</a>
+            <a href="#about-desc" class="thin-down"><i class="i-thin-down"></i></a>
         </div>
     </section>
-    <section class="line about">
+    <section class="line about" id="about-desc">
         <div class="wrap">
             <p class="about-desc">
                 <span class="about-desc-strong"><span class="about-desc-icon">E</span>xatamente o que você precisa para treinar sua equipe online.</span>
             </p>
-            <p>Uma solução <strong>simples</strong> e <strong>intuitiva</strong> criada para proporcionar<br>a melhor experiência de aprendizagem para seus colaboradores.</p>
+            <p>Uma solução <strong>fácil</strong> e <strong>intuitiva</strong> pensada para gerar maior<br><strong>efetividade</strong> e <strong>engajamento</strong> no treinamento dos seus colaboradores.</p>
             <span class="about-hand"></span>
         </div>
     </section>
@@ -75,197 +80,95 @@
             <h3>Uma plataforma pensada na sua necessidade.</h3>
             <ul class="features-list">
                 <li>
-                    <h4 class="i-interface">Interface do usuário</h4>
-                    <p>Customize a interface com sua logomarca, cores e imagens personalizadas.
-                        <br>
-                        Crie ambientes para diferentes unidades organizacionais ou áreas de negócios.</p>
+                    <h4 class="i-interface">Interface de usuário</h4>
+                    <p>Mudança de logo e cores ou customização personalizada.</p>
+                </li>
+                <li>
+                    <h4 class="i-users">Gerenciamento de usuários</h4>
+                    <p>Importação de usuários, unidades, multiplos perfis de usuário
+                        (administrador, aluno, instrutor, entre outros).
+                    </p>
+                </li>
+                <li>
+                    <h4 class="i-track">Trilhas de aprendizagem e catálogo</h4>
+                    <p>Gestão de ensino por cargo, certificação nas trilhas de aprendizagem, cursos, catálogo com categorias.</p>
+                </li>
+                <li>
+                    <h4 class="i-content">Conteúdo e avaliações</h4>
+                    <p>Gestão e utilização de objetos de aprendizagem em diferentes cursos, sequenciamente e nota media, registro de certificado, perguntas e avaliaçoes.</p>
+                </li>
+                <li>
+                    <h4 class="i-course">Cursos e gestão de matrículas</h4>
+                    <p>Gerenciamento de cursos online, regulares e blended, frequência e grade de notas, localização e instrutor (para cursos regulares).
+                        Criação de turmas e gerenciamento do fluxo de cada uma independentemente.</p>
                     </li>
                     <li>
-                        <h4 class="i-users">Gerenciamento de usuários</h4>
-                        <p>Importe o cadastro de usuários e crie múltiplos perfis (administrador, aluno, instrutor, entre outros).<br>
-                            Ofereça conteúdos segmentados por público alvo.</p>
-                        </li>
-                        <li>
-                            <h4 class="i-track">Trilhas de aprendizagem e catálogos</h4>
-                            <p>Utilize as facilidades de gestão do ensino por cargo, certificação nas trilhas de aprendizagem,<br>
-                                cursos e oferta de catálogo por categorias de conteúdo.</p>
-                            </li>
-                            <li>
-                                <h4 class="i-content">Conteúdo e avaliações</h4>
-                                <p>Utilização e gestão de objetos de aprendizagem em diferentes formatos, sequenciamento das etapas do curso<br>
-                                    e grade de notas, registro de certificado, perguntas e avaliações.</p>
-                                </li>
-                                <li>
-                                    <h4 class="i-course">Cursos e gestão de matrículas</h4>
-                                    <p>Gerenciamento de matrículas, carga horária, aproveitamento e grades de notas.<br>
-                                        Crie turmas diferentes para o mesmo curso e gerencie cada uma de forma independente.</p>
-                                    </li>
-                                    <li>
-                                        <h4 class="i-other">Mais recursos</h4>
-                                        <p>Configure mensagens e alertas automáticos, utilize a interação com salas de aulas virtuais (web conferência).<br>
-                                            Otimize a gestão com diferentes tipos de relatórios e dashboards informativos em tempo real.</p>
-                                        </li>
-                                    </ul>
-                                    <span class="anchor" id="recursos"></span>
-                                </div>
-                            </section>
-                            <section class="line plans">
-                                <div class="wrap">
-                                    <div class="plans-title">
-                                        <h3>Planos e preços</h3>
-                                        <p>O melhor custo-benefício do mercado!</p>
-                                    </div>
-                                    <ul class="plans-list">
-                                        <li>
-                                            <div class="plans-card">
-                                                <h4>Plano Básico</h4>
-                                                <p></p>
-                                                <p class="active-users">Até 40 alunos ativos</p>
-                                                <div class="plans-price">
-                                                    <span>249</span>
-                                                    <span>/mês</span>
-                                                </div>
-                                                <div class="contact">
-                                                    R$ 6,00 por usuário ativo excedente
-                                                </div>
-                                            </div>
-                                            <div class="plans-features">
-                                                <ul>
-                                                    <li>Suporte por chamado e e-mail</li>
-                                                    <li>Quantidade de cursos online ilimitada</li>
-                                                    <li>Espaço em disco ilimitado</li>
-                                                    <li>Tráfego de dados ilimitado</li>
-                                                    <li>Customização de logomarca e alteração de cores</li>
-                                                    <li>Acesso Mobile</li>
-                                                    <li>URL Personalizada</li>
-                                                    <li>Cupons de desconto</li>
-                                                    <li>Solução de e-commerce integrada</li>
-                                                    <li>Integração com serviços de web conference</li>
-                                                    <li>Emissão de certificados</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="pro">
-                                            <div class="plans-card">
-                                                <h4>Plano Intermediário</h4>
-                                                <p></p>
-                                                <p class="active-users">Até 100 alunos ativos</p>
-                                                <div class="plans-price">
-                                                    <span>599</span>
-                                                    <span>/mês</span>
-                                                </div>
-                                                <div class="contact">
-                                                    R$ 3,50 por usuário ativo excedente
-                                                </div>
-                                            </div>
-                                            <div class="plans-features">
-                                                <ul>
-                                                    <li>Suporte por chamado,e-mail e telefone</li>
-                                                    <li>Quantidade de cursos online ilimitada</li>
-                                                    <li>Espaço em disco ilimitado</li>
-                                                    <li>Tráfego de dados ilimitado</li>
-                                                    <li>Customização de logomarca e alteração de cores</li>
-                                                    <li>Acesso Mobile</li>
-                                                    <li>URL Personalizada</li>
-                                                    <li>Cupons de desconto</li>
-                                                    <li>Solução de e-commerce integrada</li>
-                                                    <li>Integração com serviços de web conference</li>
-                                                    <li>Emissão de certificados</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="plans-card">
-                                                <h4>Plano Avançado</h4>
-                                                <p></p>
-                                                <p class="active-users">Até 500 usuários ativos</p>
-                                                <div class="plans-price">
-                                                    <span>1.999</span>
-                                                    <span>/mês</span>
-                                                </div>
-                                                <div class="contact">
-                                                    R$ 3,00 por usuário ativo excedente
-                                                </div>
-                                            </div>
-                                            <div class="plans-features">
-                                                <ul>
-                                                    <li>Suporte por chamado,e-mail e telefone</li>
-                                                    <li>Quantidade de cursos online ilimitada</li>
-                                                    <li>Espaço em disco ilimitado</li>
-                                                    <li>Tráfego de dados ilimitado</li>
-                                                    <li>Customização de logomarca e alteração de cores</li>
-                                                    <li>Acesso Mobile</li>
-                                                    <li>URL Personalizada</li>
-                                                    <li>Cupons de desconto</li>
-                                                    <li>Solução de e-commerce integrada</li>
-                                                    <li>Integração com serviços de web conference</li>
-                                                    <li>Emissão de certificados</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <span class="anchor" id="planos"></span>
-                                </div>
-                            </section>
-                            <section class="line try-free">
-                                <div class="line try-free-title">
-                                    <div class="wrap">
-                                        <h3>Comece a treinar sua equipe<br>com e-learning <strong>agora mesmo!</strong></h3>
-                                        <a class="btn-try-free" href="#faleconosco">Experimentar grátis</a>
-                                        <span class="icon-doc"></span>
-                                    </div>
-                                </div>
-                                <div class="line try-free-bg"></div>
-                            </section>
-                            <section class="line contact">
-                                <div class="wrap">
-                                    <h3>Fale conosco</h3>
-                                    <form action="http://static.edutivo.com.br/contato.php" method="POST">
-                                        <div>
-                                            <label for="name">Nome</label>
-                                            <input type="text" name="name" id="nome">
-                                        </div>
-                                        <div>
-                                            <label for="empresa">Empresa</label>
-                                            <input type="text" name="empresa">
-                                        </div>
-                                        <div>
-                                            <label for="email">E-mail</label>
-                                            <input type="text" name="email">
-                                        </div>
-                                        <div>
-                                            <label for="telefone">Telefone</label>
-                                            <input type="text" name="telefone">
-                                        </div>
-                                        <div class="message">
-                                            <label for="mensagem">Mensagem</label>
-                                            <textarea name="mensagem"></textarea>
-                                        </div>
-                                        <button class="btn-form" type="submit" name="submit">Enviar</button>
-                                    </form>
-                                    <span class="anchor" id="faleconosco"></span>
-                                </div>
-                            </section>
-                            <footer>
-                                <div class="wrap">
-                                    <span class="edutivo-icon"></span>
-                                    <div class="company">
-                                        <img class="logo-edutivo" src="assets/img/edutivo_logo2.svg" alt="Plataforma LMS intuitiva" />
-                                        <p>um produto da</p>
-                                        <a href="http://www.ilog.com.br/" target="_blank">
-                                            <img class="logo-ilog" src="assets/img/ilog_logo.png" alt="Ilog" />
-                                        </a>
-                                    </div>
-                                    <div class="info">
-                                        <p>contato@edutivo.com.br</p>
-                                        <p>(48) 3333-1998</p>
-                                    </div>
-                                    <div class="copyright">
-                                        <p>&copy; Ilog 2000-2016 - Centro de Inovação ACATE Primavera - Rodovia SC 401, Km 4, s/n, Sala 19 - CEP 88032-000 - Saco Grande - Florianópolis - SC - Brasil</p>
-                                    </div>
-                                </div>
-                            </footer>
-                            <link rel="stylesheet" href="assets/css/app.css">
-                            <script src="assets/js/app.js"></script>
-                        </body>
-                        </html>
+                        <h4 class="i-other">Mais recursos</h4>
+                        <p>Gestão de mensagens e alertas automáticos interação com salas de aulas virtuais (web conferência), gerador de relátorios.</p>
+                    </li>
+                </ul>
+                <span class="anchor" id="recursos"></span>
+            </div>
+        </section>
+        <section class="line try-free">
+            <div class="line try-free-title">
+                <div class="wrap">
+                    <h3>Comece a treinar sua equipe<br>com e-learning <strong>agora mesmo!</strong></h3>
+                    <a class="btn-try-free" href="#faleconosco">Experimentar grátis</a>
+                    <span class="icon-doc"></span>
+                </div>
+            </div>
+            <div class="line try-free-bg"></div>
+        </section>
+        <section class="line contact">
+            <div class="wrap">
+                <h3>Fale conosco</h3>
+                <form action="http://static.edutivo.com.br/contato.php" method="POST">
+                    <div>
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="nome">
+                    </div>
+                    <div>
+                        <label for="empresa">Empresa</label>
+                        <input type="text" name="empresa">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email">
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <input type="text" name="telefone">
+                    </div>
+                    <div class="message">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem"></textarea>
+                    </div>
+                    <button class="btn-form" type="submit" name="submit">Enviar</button>
+                </form>
+                <span class="anchor" id="faleconosco"></span>
+            </div>
+        </section>
+        <footer>
+            <div class="wrap">
+                <span class="edutivo-icon"></span>
+                <div class="company">
+                    <img class="logo-edutivo" src="assets/img/edutivo_logo2.svg" alt="Plataforma LMS intuitiva" />
+                    <p>um produto da</p>
+                    <a href="http://www.ilog.com.br/" target="_blank">
+                        <img class="logo-ilog" src="assets/img/ilog_logo.png" alt="Ilog" />
+                    </a>
+                </div>
+                <div class="info">
+                    <p>contato@edutivo.com.br</p>
+                    <p>(48) 3333-1998</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; Ilog 2000-2016 - Centro de Inovação ACATE Primavera - Rodovia SC 401, Km 4, s/n, Sala 19 - CEP 88032-000 - Saco Grande - Florianópolis - SC - Brasil</p>
+                </div>
+            </div>
+        </footer>
+        <link rel="stylesheet" href="assets/css/app.css">
+        <script src="assets/js/app.js"></script>
+    </body>
+    </html>

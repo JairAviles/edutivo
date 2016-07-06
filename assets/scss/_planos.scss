@@ -1,0 +1,190 @@
+.plans {
+    padding: 40px 0 0;
+    background-color: $color_3;
+    margin-top: 100px;
+
+    .plans-title {
+        text-align: center;
+
+        h3 {
+            color: #fff;
+            font-size: 3.5em;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 2em;
+            font-weight: 500;
+            margin-bottom: 50px;
+
+            @include breakpoint(md) {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    .plans-list {
+        width: 80%;
+        margin: 0 auto;
+        @extend %clearfix;
+
+        > li {
+            width: 30%;
+            float: left;
+            display: block;
+            padding: 0 5px;
+            margin-top: 50px;
+
+            @include breakpoint(md) {
+                position: relative;
+                margin-bottom: 50px;
+                width: 100%;
+            }
+
+            &.pro {
+                width: 40%;
+                margin-top: 0;
+
+                @include breakpoint(md) {
+                    width: 100%;
+                }
+
+                .plans-card {
+                    color: #fff;
+                    background-color: $color_1;
+
+                    &:before {
+                        content: '';
+                        width: 40px;
+                        height: 70px;
+                        display: block;
+                        background-image: url('../img/plan_pro.png');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        top: 0;
+                        @include breakpoint(md) {
+                            background-image: none;
+                        }
+                    }
+
+                    .active-users {
+                        color: $color_2;
+                    }
+
+                    .plans-price span {
+                        color: #fff;
+                    }
+                }
+
+                .plans-features {
+                    padding-bottom: 90px;
+                }
+            }
+
+            .plans-card {
+                color: $color_3;
+                min-height: 410px;
+                padding: 30px;
+                text-align: center;
+                border-radius: 10px;
+                background-color: #fff;
+                position: relative;
+                z-index: 2;
+                bottom: -10px;
+
+                h4 {
+                    font-size: 1.9em;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 1.5em;
+                    font-weight: 300;
+                    text-align: center;
+                    margin: 20px 0;
+
+                    &.active-users {
+                        color: $color_1;
+                        font-weight: 600;
+                    }
+                }
+
+                .btn-confer {
+                    color: #fff;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    margin: 20px 0;
+                    padding: 10px 30px;
+                    border-radius: 8px;
+                    background-color: $color_1;
+
+                    &:hover {
+                        background-color: $color_2;
+                    }
+                }
+
+                .plans-price {
+                    text-align: center;
+                    position: relative;
+
+                    span {
+                        color: $color_1;
+                        font-size: 6.4em;
+                        font-weight: 600;
+                        display: block;
+
+                        @include breakpoint(md) {
+                            font-size: 6.0em;
+                        }
+
+                        & + span {
+                            font-size: 1.8em;
+                            font-weight: 400;
+                            transform: translate(40px, -15px);
+                        }
+                    }
+                }
+            }
+
+            .plans-features {
+                padding: 40px;
+                background-color: $color_4;
+                position: relative;
+                z-index: 1;
+
+                ul {
+                    padding-left: 20px;
+                    list-style-type: disc;
+                    margin-bottom: 30px;
+
+                    li {
+                        color: #fff;
+                        font-size: 1.2em;
+                        font-weight: 300;
+                        line-height: 2em;
+                    }
+                }
+
+                span {
+                        text-align: center;
+                        color: white;
+                        text-decoration: underline;
+                        font-size: 1.1em;
+                        margin-left: auto;
+                        margin-right: auto;
+                }
+
+                @include breakpoint(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
