@@ -32,7 +32,7 @@
         @extend %clearfix;
 
         > li {
-            width: 30%;
+            width: 34%;
             float: left;
             display: block;
             padding: 0 5px;
@@ -45,11 +45,17 @@
             }
 
             &.pro {
-                width: 40%;
+                width: 32%;
                 margin-top: 0;
 
                 @include breakpoint(md) {
                     width: 100%;
+                }
+
+                + li {
+                    @include breakpoint(md) {
+                        margin-top: 0px;
+                    }
                 }
 
                 .plans-card {
@@ -58,7 +64,7 @@
 
                     &:before {
                         content: '';
-                        width: 40px;
+                        width: 26px;
                         height: 70px;
                         display: block;
                         background-image: url('../img/plan_pro.png');
@@ -66,6 +72,7 @@
                         background-size: contain;
                         position: absolute;
                         top: 0;
+                        transform: translateX(-20px);
                         @include breakpoint(md) {
                             background-image: none;
                         }
@@ -133,21 +140,46 @@
                 .plans-price {
                     text-align: center;
                     position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: 200px;
+                    width: 100%;
 
                     span {
                         color: $color_1;
-                        font-size: 6.4em;
+                        font-size: 5.5em;
                         font-weight: 600;
-                        display: block;
+                        display: inline-block;
 
                         @include breakpoint(md) {
-                            font-size: 6.0em;
+                            font-size: 5.0em;
                         }
 
-                        & + span {
+                        &.symbol {
+                            vertical-align: top;
+                            position: relative;
+                            transform: translate(-2px, 40px);
+                            font-size: 1.8em;
+
+                            &.avancado {
+                                transform: translate(-110px, 80px);
+
+                                @include breakpoint(md) {
+                                    transform: translate(0, 40px);
+                                }
+                            }
+
+                        }
+
+                        &.month {
                             font-size: 1.8em;
                             font-weight: 400;
                             transform: translate(40px, -15px);
+
+
+                            @include breakpoint(md) {
+                                transform: translate(0);
+                            }
                         }
                     }
                 }
@@ -181,10 +213,38 @@
                         margin-right: auto;
                 }
 
-                @include breakpoint(md) {
-                    display: none;
-                }
             }
         }
     }
+
+    .plan-list-home {
+        margin-bottom: 100px;
+    }
+
+    .btn-saiba-mais {
+            color: #fff;
+            display: inline-block;
+            font-size: 2.5em;
+            font-weight: 600;
+            padding: 20px 30px;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+            background-color: $color_1;
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            transition: .3s;
+
+            &:hover {
+                background-color: #fff;
+                color: $color_3;
+            }
+
+            @include breakpoint(md) {
+                font-size: 1.9em;
+            }
+        }
 }
