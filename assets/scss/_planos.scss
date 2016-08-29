@@ -32,7 +32,7 @@
         @extend %clearfix;
 
         > li {
-            width: 34%;
+            width: 30%;
             float: left;
             display: block;
             padding: 0 5px;
@@ -45,7 +45,7 @@
             }
 
             &.pro {
-                width: 32%;
+                width: 40%;
                 margin-top: 0;
 
                 @include breakpoint(md) {
@@ -147,39 +147,18 @@
 
                     span {
                         color: $color_1;
-                        font-size: 5.5em;
+                        font-size: 6.4em;
                         font-weight: 600;
-                        display: inline-block;
+                        display: block;
 
                         @include breakpoint(md) {
-                            font-size: 5.0em;
+                            font-size: 6.0em;
                         }
 
-                        &.symbol {
-                            vertical-align: top;
-                            position: relative;
-                            transform: translate(-2px, 40px);
-                            font-size: 1.8em;
-
-                            &.avancado {
-                                transform: translate(-110px, 80px);
-
-                                @include breakpoint(md) {
-                                    transform: translate(0, 40px);
-                                }
-                            }
-
-                        }
-
-                        &.month {
+                        & + span {
                             font-size: 1.8em;
                             font-weight: 400;
                             transform: translate(40px, -15px);
-
-
-                            @include breakpoint(md) {
-                                transform: translate(0);
-                            }
                         }
                     }
                 }
